@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="form">
+        <h1>formularios</h1>
+        <form action="pagina.html" method="post" enctype="multipart/form-data">
+            <label for="end">endereço</label>
+            <input type="text" name="endereco" id="endereco"><br>
+            <label for="cidade">cidade</label>
+            <input type="text" name="cidade" id="cidade"><br>
+            <label for="idade">idade</label>
+            <input type="number" name="idade" id="idade" min="0" max="200" step="1"><br>
+            <label for="quantidade">quantidade</label>
+            <input type="range" name="quantidade" id="quantidade" min="0" max="100" oninput="valor_quantidade.value  = quantidade.value"> 
+            <output name="valor_quantidade" id="valor_quantidade">50</output><br>
+            <label for="Email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="exemplo.@email.com.br"><br>
+            <label for="tel">Telefone</label>
+            <input type="tel" name="telefone" id="telefone"  placeholder="(99) 9999-9999"><br>
+            <label for="">URL</label>
+            <input type="url" name="url" id="url" placeholder="http://exemplo.www.com.br"><br>
+            <label for="Data">Data</label>
+            <input type="date" name="date" id="date"><br>
+            <label for="data_hora">Data e hora</label>
+            <input type="datetime-local" name="data_hora" id="data_hora"><br>
+            <label for="password">Senha</label>
+            <input type="password" name="senha" id="senha"><br>
+            <label for="Mensagem" class="msg">Mensagem</label>
+            <textarea name="mensagem" id="msg" cols="30" rows="10"></textarea><br>
+            <label for="Linguagem">Linguagem</label>
+            <input type="checkBox" name="linguagem" value="java">Java
+            <input type="checkBox" name="linguagem" value="php">PHP
+            <input type="checkBox" name="linguagem" value="perl">Perl<br>
+            <label for="Linguagem">Sexo</label>
+            <input type="radio" name="linguagem" value="M">Masculino
+            <input type="radio" name="linguagem" value="F">Feminino
+            <input type="radio" name="linguagem" value="I">Indefinido<br>
+            <label for="cor">cor</label>
+            <input type="color" name="cor" id="cor"><br>
+            <label for="arquivo">Botão de <i>Upload</i></label>
+            <input type="file" name="btn_up" id="btn_up"><br>
+            <label for="estado">estado</label>
+            <select name="estado" id="estado">
+                <option value="SP">São paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RS">Rio Grande do sul</option>
+                <option value="PR">Paraná</option>
+                <option value="PN">Rio Grande do Norte</option>
+                <option value="BA">bahia</option>
+            </select><br>
+            <input type="submit" value="enviar">
+            <input type="reset" value="apagar">
+        </form>
+    </div>
+</body>
+</html>
