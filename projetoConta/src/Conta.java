@@ -36,7 +36,9 @@ public class Conta {
         this.nomeCliente = nomeCliente;
     }
     public int sacar(double valor){
-        if(getSaldo() > valor){
+        if(getSaldo() == 0){
+            return 0;
+        }else if(getSaldo() >= valor){
             setSaldo(getSaldo()- valor);
             return 1;
         }else{
